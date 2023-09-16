@@ -1,7 +1,7 @@
 """ITF 08 Final Project Attendance System
 # TODO 1 Enter your name and submission date
-Name :
-Delivery Date :
+Name :Ahmed Elkurd
+Delivery Date :17-9
 """
 
 
