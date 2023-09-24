@@ -61,6 +61,7 @@ class Student:
 
 # in Global Scope
 # TODO 8 declare empty students list
+students = []
 
 while True:
 
