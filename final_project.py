@@ -66,6 +66,8 @@ students = []
 while True:
 
     # TODO 9 handle Exception for selection input
+    try:
+
     selection = int(input("1.Add New Student\n"
                           "2.Delete Student\n"
                           "3.Display Student\n"
