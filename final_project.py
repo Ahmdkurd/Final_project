@@ -79,13 +79,18 @@ while True:
 
         # TODO 10 make sure that Student number is not exists before
         student_number = input("Enter Student Number")
+        existing_student = next((student for student in students if student.student_number == student_number), None)
 
-        student_name = input("Enter Student Name")
+        if existing_student:
+            print("Student with the same number already exists.")
+        else:
+            student_name = input("Enter Student Name")
+
         while True:
             try:
                 student_age = int(input("Enter Student Age"))
                 break
-            except:
+            except ValueError:
                 print("Invalid Value")
 
         # TODO 11 create student object and append it to students list
