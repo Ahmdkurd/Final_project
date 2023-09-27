@@ -68,7 +68,7 @@ while True:
     # TODO 9 handle Exception for selection input
     try:
 
-    selection = int(input("1.Add New Student\n"
+      selection = int(input("1.Add New Student\n"
                           "2.Delete Student\n"
                           "3.Display Student\n"
                           "4.Get Student Average\n"
@@ -120,6 +120,12 @@ while True:
 
     elif selection == 4:
         student_number = input("Enter Student Number")
+        existing_student = next((student for student in students if student.student_number == student_number), None)
+        if existing_student:
+            student_average = existing_student.get_student_average()
+            print(f"Student Average: {student_average}")
+        else:
+            print("Student Not Exist")
         # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
 
     elif selection == 5:
