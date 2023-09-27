@@ -110,6 +110,12 @@ while True:
 
     elif selection == 3:
         student_number = input("Enter Student Number")
+        existing_student = next((student for student in students if student.student_number == student_number), None)
+        if existing_student:
+            print("Student Details:")
+            print(existing_student.__dict__)
+        else:
+            print("Student Not Exist")
         # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
 
     elif selection == 4:
