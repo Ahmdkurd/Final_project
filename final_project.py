@@ -94,11 +94,18 @@ while True:
                 print("Invalid Value")
 
         # TODO 11 create student object and append it to students list
-
+        new_student = Student(student_name, student_age, student_number)
+        students.append(new_student)
         print("Student Added Successfully")
 
     elif selection == 2:
         student_number = input("Enter Student Number")
+        existing_student = next((student for student in students if student.student_number == student_number), None)
+        if existing_student:
+            students.remove(existing_student)
+            print("Student Deleted Successfully")
+        else:
+            print("Student Not Exist")
         # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
 
     elif selection == 3:
